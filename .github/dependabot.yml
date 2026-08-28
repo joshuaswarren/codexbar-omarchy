@@ -1,0 +1,6 @@
+# Dependabot tracks AUR codexbar-cli upstream releases (informational only)
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule: { interval: "weekly" }

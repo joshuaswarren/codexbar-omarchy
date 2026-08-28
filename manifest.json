@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "joshuaswarren.codexbar",
+  "name": "CodexBar",
+  "version": "0.1.0",
+  "author": "Joshua Warren (joshuaswarren)",
+  "description": "AI coding-provider usage, spend, and reset countdowns in the Omarchy bar. Quickshell front-end for steipete/CodexBar's codexbar CLI.",
+  "homepage": "https://github.com/joshuaswarren/codexbar-omarchy",
+  "kinds": ["bar-widget", "service", "panel", "menu"],
+  "entryPoints": {
+    "barWidget": "widgets/CodexBarBar.qml",
+    "service": "poller/CodexBarService.qml",
+    "panel": "panels/CodexBarPanel.qml",
+    "menu": "menu/CodexBarMenu.qml"
+  },
+  "barWidget": {
+    "displayName": "CodexBar",
+    "description": "Per-provider usage meters and reset countdowns (Codex, Claude, Cursor, OpenRouter, …). Auto-discovers new providers from codexbar.",
+    "category": "System",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}

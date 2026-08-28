@@ -1,0 +1,130 @@
+{
+  "providers": [
+    {"id":"codex","name":"Codex","enabled":true,"windows":["session","weekly"]},
+    {"id":"claude","name":"Claude","enabled":true,"windows":["session","weekly"]},
+    {"id":"openai","name":"OpenAI","enabled":false},
+    {"id":"azure_openai","name":"Azure OpenAI","enabled":false},
+    {"id":"cursor","name":"Cursor","enabled":true,"windows":["session","monthly"]},
+    {"id":"opencode","name":"OpenCode","enabled":false},
+    {"id":"opencode_go","name":"OpenCode Go","enabled":false},
+    {"id":"alibaba_coding_plan","name":"Alibaba Coding Plan","enabled":false},
+    {"id":"alibaba_token_plan","name":"Alibaba Token Plan","enabled":false},
+    {"id":"qwen_cloud","name":"Qwen Cloud","enabled":false},
+    {"id":"gemini","name":"Gemini","enabled":true,"windows":["session","weekly"]},
+    {"id":"antigravity","name":"Antigravity","enabled":false},
+    {"id":"droid","name":"Droid","enabled":false},
+    {"id":"copilot","name":"Copilot","enabled":true,"windows":["session","monthly"]},
+    {"id":"devin","name":"Devin","enabled":false},
+    {"id":"z.ai","name":"z.ai","enabled":false},
+    {"id":"manus","name":"Manus","enabled":false},
+    {"id":"minimax","name":"MiniMax","enabled":false},
+    {"id":"t3chat","name":"T3 Chat","enabled":false},
+    {"id":"zoommate","name":"ZoomMate","enabled":false},
+    {"id":"kimi","name":"Kimi","enabled":false},
+    {"id":"kilo","name":"Kilo","enabled":false},
+    {"id":"kiro","name":"Kiro","enabled":false},
+    {"id":"vertexai","name":"Vertex AI","enabled":false},
+    {"id":"augment","name":"Augment","enabled":false},
+    {"id":"amp","name":"Amp","enabled":false},
+    {"id":"ollama","name":"Ollama","enabled":false},
+    {"id":"synthetic","name":"Synthetic","enabled":false},
+    {"id":"jetbrains","name":"JetBrains AI","enabled":false},
+    {"id":"warp","name":"Warp","enabled":false},
+    {"id":"elevenlabs","name":"ElevenLabs","enabled":false},
+    {"id":"openrouter","name":"OpenRouter","enabled":true,"windows":["session","weekly"]},
+    {"id":"windsurf","name":"Windsurf","enabled":false},
+    {"id":"zed","name":"Zed","enabled":false},
+    {"id":"perplexity","name":"Perplexity","enabled":false},
+    {"id":"mimo","name":"Xiaomi MiMo","enabled":false},
+    {"id":"doubao","name":"Doubao","enabled":false},
+    {"id":"sakana","name":"Sakana AI","enabled":false},
+    {"id":"abacus","name":"Abacus AI","enabled":false},
+    {"id":"mistral","name":"Mistral","enabled":false},
+    {"id":"deepseek","name":"DeepSeek","enabled":false},
+    {"id":"fireworks","name":"Fireworks","enabled":false},
+    {"id":"deepinfra","name":"DeepInfra","enabled":false},
+    {"id":"moonshot","name":"Moonshot / Kimi API","enabled":false},
+    {"id":"venice","name":"Venice","enabled":false},
+    {"id":"codebuff","name":"Codebuff","enabled":false},
+    {"id":"crof","name":"Crof","enabled":false},
+    {"id":"command_code","name":"Command Code","enabled":false},
+    {"id":"qoder","name":"Qoder","enabled":false},
+    {"id":"stepfun","name":"StepFun","enabled":false},
+    {"id":"bedrock","name":"AWS Bedrock","enabled":false},
+    {"id":"grok","name":"Grok","enabled":false},
+    {"id":"groqcloud","name":"GroqCloud","enabled":false},
+    {"id":"llm_proxy","name":"LLM Proxy","enabled":false},
+    {"id":"clawrouter","name":"ClawRouter","enabled":false},
+    {"id":"sub2api","name":"sub2api","enabled":false},
+    {"id":"wayfinder","name":"Wayfinder","enabled":false},
+    {"id":"litellm","name":"LiteLLM","enabled":false},
+    {"id":"deepgram","name":"Deepgram","enabled":false},
+    {"id":"poe","name":"Poe","enabled":false},
+    {"id":"chutes","name":"Chutes","enabled":false},
+    {"id":"neuralwatt","name":"Neuralwatt","enabled":false},
+    {"id":"zenmux","name":"ZenMux","enabled":false},
+    {"id":"xai","name":"xAI","enabled":false},
+    {"id":"ibm_bob","name":"IBM Bob","enabled":false}
+  ],
+  "usage": {
+    "codex": {
+      "provider": "codex",
+      "primary": {"used": 18, "limit": 100, "unit": "%", "resetAt": "2026-08-28T18:00:00Z"},
+      "windows": [
+        {"name":"session","used":18,"limit":100,"unit":"%","resetAt":"2026-08-28T18:00:00Z"},
+        {"name":"weekly","used":42,"limit":100,"unit":"%","resetAt":"2026-08-31T00:00:00Z"}
+      ],
+      "spend": {"today":1.23,"week":7.89,"month":31.0,"currency":"USD"},
+      "status": "ok"
+    },
+    "claude": {
+      "provider": "claude",
+      "primary": {"used": 73, "limit": 100, "unit": "%", "resetAt": "2026-08-29T12:00:00Z"},
+      "windows": [
+        {"name":"session","used":73,"limit":100,"unit":"%","resetAt":"2026-08-29T12:00:00Z"},
+        {"name":"weekly","used":51,"limit":100,"unit":"%","resetAt":"2026-08-31T00:00:00Z"}
+      ],
+      "spend": {"today":0.42,"week":4.10,"month":18.3,"currency":"USD"},
+      "status": "warning"
+    },
+    "gemini": {
+      "provider": "gemini",
+      "primary": {"used": 91, "limit": 100, "unit": "%", "resetAt": "2026-08-28T20:00:00Z"},
+      "windows": [
+        {"name":"session","used":91,"limit":100,"unit":"%","resetAt":"2026-08-28T20:00:00Z"}
+      ],
+      "status": "urgent"
+    },
+    "openrouter": {
+      "provider": "openrouter",
+      "primary": {"used": 32, "limit": 100, "unit": "%", "resetAt": "2026-08-28T22:00:00Z"},
+      "windows": [
+        {"name":"session","used":32,"limit":100,"unit":"%","resetAt":"2026-08-28T22:00:00Z"},
+        {"name":"weekly","used":28,"limit":100,"unit":"%","resetAt":"2026-08-31T00:00:00Z"}
+      ],
+      "spend": {"today":0.05,"week":0.30,"month":1.20,"currency":"USD"},
+      "status": "ok"
+    },
+    "copilot": {
+      "provider": "copilot",
+      "primary": {"used": 12, "limit": 100, "unit": "%", "resetAt": "2026-09-01T00:00:00Z"},
+      "windows": [
+        {"name":"monthly","used":12,"limit":100,"unit":"%","resetAt":"2026-09-01T00:00:00Z"}
+      ],
+      "status": "ok"
+    }
+  },
+  "spend7": {
+    "days": 7,
+    "currency": "USD",
+    "history": [
+      {"date":"2026-08-22","total":1.20,"byProvider":{"codex":0.90,"claude":0.30}},
+      {"date":"2026-08-23","total":2.10,"byProvider":{"codex":1.50,"claude":0.60}},
+      {"date":"2026-08-24","total":0.40,"byProvider":{"claude":0.40}},
+      {"date":"2026-08-25","total":3.20,"byProvider":{"codex":2.00,"claude":1.20}},
+      {"date":"2026-08-26","total":2.80,"byProvider":{"codex":1.80,"claude":1.00}},
+      {"date":"2026-08-27","total":1.65,"byProvider":{"codex":1.23,"claude":0.42}},
+      {"date":"2026-08-28","total":0.00,"byProvider":{}}
+    ]
+  }
+}

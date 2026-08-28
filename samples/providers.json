@@ -1,0 +1,18 @@
+{
+  "mergeMode": false,
+  "enabled": {
+    "codex": true,
+    "claude": true,
+    "cursor": true,
+    "openrouter": true
+  },
+  "providers": {
+    "codex":       { "icon": "\uf135", "accentColor": "#10a37f" },
+    "claude":      { "icon": "\ue8d6", "accentColor": "#d97706" },
+    "cursor":      { "icon": "\uf178", "accentColor": "#000000" },
+    "openrouter":  { "icon": "\uf362", "accentColor": "#6366f1" },
+    "gemini":      { "icon": "\ueb3a", "accentColor": "#4285f4" },
+    "copilot":     { "icon": "\uf09b", "accentColor": "#a78bfa" },
+    "grok":        { "icon": "\ue6f0", "accentColor": "#facc15" }
+  }
+}

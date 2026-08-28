@@ -1,0 +1,62 @@
+name: ci
+
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+
+jobs:
+  manifest-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest.json
+        run: |
+          python3 -c '
+          import json, sys
+          m = json.load(open("manifest.json"))
+          assert m["schemaVersion"] == 1, m
+          assert "kinds" in m and m["kinds"], m
+          for k in m["kinds"]:
+              assert k in {"bar-widget","service","panel","overlay","menu","bar"}, k
+          assert "/" not in m["id"], m
+          print("manifest ok:", m["id"])
+          '
+      - name: List entry points
+        run: |
+          python3 -c '
+          import json, os
+          m = json.load(open("manifest.json"))
+          for kind, path in m["entryPoints"].items():
+              assert os.path.exists(path), (kind, path)
+              print(f"{kind} -> {path}")
+          '
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y shellcheck
+      - run: shellcheck scripts/*.sh
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install codexbar-cli (AUR requires Arch; skip on linux)
+        continue-on-error: true
+        run: |
+          # CI exercises the script path with a mocked codexbar shim
+          mkdir -p "$HOME/bin"
+          cat > "$HOME/bin/codexbar" <<'EOF'
+          #!/usr/bin/env bash
+          case "$1" in
+            --version) echo "codexbar 0.0.0-test" ;;
+            providers)
+              if [[ "$2" == "list" ]]; then
+                echo '[{"id":"codex","name":"Codex","enabled":true},{"id":"claude","name":"Claude","enabled":true}]'
+              fi
+              ;;
+          esac
+          EOF
+          chmod +x "$HOME/bin/codexbar"
+      - run: PATH="$HOME/bin:$PATH" bash scripts/verify.sh

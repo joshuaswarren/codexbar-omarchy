@@ -1,0 +1,23 @@
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# python (tests)
+__pycache__/
+*.pyc
+.venv/
+
+# symlink used for dev (created by scripts/dev-link.sh)
+.plugin-dev-link
+
+# local override of providers.json (placed in plugin install dir, not repo)
+local-providers.json
