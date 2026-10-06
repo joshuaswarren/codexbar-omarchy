@@ -1,5 +1,7 @@
 # codexbar-omarchy
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink)](https://github.com/sponsors/joshuaswarren)
+
 > AI coding-provider usage, spend, and reset countdowns in the Omarchy bar.
 
 A polished [Omarchy v4 (Quickshell)](https://omarchy.org/) plugin that wraps
@@ -159,6 +161,14 @@ python3 tests/run_tests.py  # fixture-driven parser tests
 ```
 
 See `docs/PLAN.md` for the full roadmap.
+
+## Support
+
+Every bit of support helps keep codexbar-omarchy alive and free. If you are able, [sponsor on GitHub](https://github.com/sponsors/joshuaswarren) or send a Lightning donation to `joshuaswarren@strike.me` to directly fund continued development and new integrations.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?style=for-the-badge)](https://github.com/sponsors/joshuaswarren)
+
+If financial support is not an option, you can still make a big difference: [star the repo](https://github.com/joshuaswarren/codexbar-omarchy), share it, or recommend it to a colleague. Word of mouth is how most people find codexbar-omarchy.
 
 ## License
 
